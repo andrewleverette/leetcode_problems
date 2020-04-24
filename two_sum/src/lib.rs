@@ -10,7 +10,8 @@ use std::collections::HashMap;
 /// # Approach
 /// 
 /// This solution uses a HashMap to store the complement - `target` - `num`.
-/// If a complement 
+/// If a complement is seen in `nums` then return a vector containing the current index
+/// and the complements index.
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut complements: HashMap<i32, i32> = HashMap::new();
     for (i, num) in nums.iter().enumerate() {
