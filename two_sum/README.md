@@ -12,3 +12,10 @@ You may assume that each input would have exactly one solution, and you may not 
 >
 > Because nums[0] + nums[1] = 2 + 7 = 9,
 > return [0, 1].
+
+## Solutions
+
+|     | Language |
+| --- | -------- |
+|  ✅ | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/python/two_sum.py)|
+|  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/rust/src/lib.rs) |
