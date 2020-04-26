@@ -17,4 +17,4 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 |     | Language |
 | --- | -------- |
 |  ✅ | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/add_two_numbers/python/add_two_numbers.py)|
-|  -  | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/add_two_numbers/rust/src/lib.rs) |
+|  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/add_two_numbers/rust/src/lib.rs) |
