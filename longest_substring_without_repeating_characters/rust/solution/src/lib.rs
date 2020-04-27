@@ -15,7 +15,7 @@ use std::cmp;
 /// forward to the ending position of the current substring. This solution works
 /// if you can make safe assumptions about the characters set. In this case I assume
 /// the character set is standard ASCII.
-pub fn length_longest_substring_sliding_window_optimized(s: String) -> i32 {
+pub fn length_of_longest_substring_sliding_window_optimized(s: String) -> i32 {
     let mut length = 0;
 
     let mut char_set = [0; 128];
@@ -36,7 +36,7 @@ mod tests {
     #[test]
     fn test_example_1() {
         assert_eq!(
-            length_longest_substring_sliding_window_optimized(String::from("abcabcbb")),
+            length_of_longest_substring_sliding_window_optimized(String::from("abcabcbb")),
             3
         );
     }
@@ -44,7 +44,7 @@ mod tests {
     #[test]
     fn test_example_2() {
         assert_eq!(
-            length_longest_substring_sliding_window_optimized(String::from("bbbb")),
+            length_of_longest_substring_sliding_window_optimized(String::from("bbbb")),
             1
         );
     }
@@ -52,7 +52,7 @@ mod tests {
     #[test]
     fn test_example_3() {
         assert_eq!(
-            length_longest_substring_sliding_window_optimized(String::from("pwwkew")),
+            length_of_longest_substring_sliding_window_optimized(String::from("pwwkew")),
             3
         );
     }
