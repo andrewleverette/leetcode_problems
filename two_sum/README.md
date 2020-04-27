@@ -74,3 +74,8 @@ for i in length of nums
     else
         map.insert(target - num, i)
 ```
+
+#### Complexity
+
+- Time complexity: O(n) - The `nums` vector is only iterated over once.
+- Space complexity O(n) - The extra space for the hash map.
