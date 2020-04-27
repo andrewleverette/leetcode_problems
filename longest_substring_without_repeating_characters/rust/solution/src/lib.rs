@@ -20,11 +20,11 @@ pub fn length_longest_substring_sliding_window_optimized(s: String) -> i32 {
 
     let mut char_set = [0; 128];
 
-    let mut i = 0;
-    for (j, c) in s.char_indices() {
-        i = cmp::max(char_set[c as usize], i);
-        length = cmp::max(length, j - i + 1);
-        char_set[c as usize] = j + 1;
+    let mut start = 0;
+    for (end, c) in s.char_indices() {
+        start = cmp::max(char_set[c as usize], start);
+        length = cmp::max(length, end - start + 1);
+        char_set[c as usize] = end + 1;
     }
 
     length as i32
