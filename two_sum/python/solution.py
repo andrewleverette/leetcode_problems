@@ -23,6 +23,20 @@ def two_sum_brute_force(nums: List[int], target: int) -> List[int]:
 
 
 def two_sum_two_pass_hash(nums: List[int], target: int) -> List[int]:
+    """
+    Returns the indices of two numbers that add up to a specific target
+
+    Arguments
+
+    * `nums` - A vector of integers
+    * `target` - Result of the sum of two numbers in `nums`
+
+    Approach
+
+    This solution converts the `nums` vector into a HashMap
+    and iterates through the `nums` vector` again to test which
+    number has a complement.
+    """
     num_map = {}
     for i, num in enumerate(nums):
         num_map[num] = i
