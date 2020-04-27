@@ -33,5 +33,5 @@ Given a string, find the length of the longest substring without repeating chara
 
 |     | Language |
 | --- | -------- |
-|  - | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/longest_substring_without_repeating_characters/python/solution.py)|
+|  ✅ | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/longest_substring_without_repeating_characters/python/solution.py)|
 |  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/longest_substring_without_repeating_characters/rust/solution/src/lib.rs) |
