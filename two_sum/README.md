@@ -18,4 +18,4 @@ You may assume that each input would have exactly one solution, and you may not 
 |     | Language |
 | --- | -------- |
 |  ✅ | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/python/two_sum.py)|
-|  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/rust/src/lib.rs) |
+|  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/rust/two_sum/src/lib.rs) |
