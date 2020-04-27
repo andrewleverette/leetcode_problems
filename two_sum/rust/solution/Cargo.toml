@@ -1,5 +1,5 @@
 [package]
-name = "two_sum"
+name = "solution"
 version = "0.1.0"
 authors = ["andrewleverette <andrew.leverette@decisionsource.com>"]
 edition = "2018"

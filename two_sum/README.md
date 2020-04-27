@@ -17,5 +17,23 @@ You may assume that each input would have exactly one solution, and you may not 
 
 |     | Language |
 | --- | -------- |
-|  ✅ | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/python/two_sum.py)|
-|  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/rust/two_sum/src/lib.rs) |
+|  ✅ | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/python/solution.py)|
+|  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/two_sum/rust/solution/src/lib.rs) |
+
+### Approach 1: Brute Force
+
+The naive approach to solving this problem is to loop through each element `x` in `nums` and then loop through each element again to find if there is a value that equals `target` - `x`
+
+#### Algorithm
+
+```
+for i = 0 to length of nums
+    for j = i + 1 to length of nums
+        if nums[j] == target - nums[i]
+            return [i, j]
+```
+
+#### Complexity
+
+- Time complexity: O(n^2) since for each element we loop through of the array
+- Space complexity: O(1)

@@ -9,6 +9,30 @@ use std::collections::HashMap;
 ///
 /// # Approach
 ///
+/// This naive solution loops through each element `x` in `nums` and 
+/// then loops through each element again to find if there is a value 
+/// that equals `target` - `x`.
+pub fn two_sum_brute_force(nums: Vec<i32>, target: i32) -> Vec<i32> {
+    for i in 0..nums.len() {
+        for j in (i + 1)..nums.len() {
+            if nums[j] == target - nums[i] {
+                return vec![i as i32, j as i32]
+            }
+        }
+    }
+
+    vec![]
+}
+
+/// Returns the indices of two numbers that add up to a specific target
+///
+/// # Arguments
+///
+/// * `nums` - A vector of integers
+/// * `target` - Result of the sum of two numbers in `nums`
+///
+/// # Approach
+///
 /// This solution uses a HashMap to store the complement - `target` - `num`.
 /// If a complement is seen in `nums` then return a vector containing the current index
 /// and the complements index.
@@ -29,9 +53,10 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_given_example() {
+    fn test_example_1() {
         let nums = vec![2, 7, 11, 15];
         let target = 9;
+        assert_eq!(two_sum_brute_force(nums.clone(), target), vec![0, 1]);
         assert_eq!(two_sum(nums, target), vec![0, 1]);
     }
 }
