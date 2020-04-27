@@ -14,7 +14,7 @@ use std::cmp;
 /// If that character has already been seen, then slide the starting position 
 /// forward to the ending position of the current substring. This solution works
 /// if you can make safe assumptions about the characters set. In this case I assume
-/// the character is standard ASCII.
+/// the character set is standard ASCII.
 pub fn length_longest_substring_sliding_window_optimized(s: String) -> i32 {
     let mut length = 0;
 
