@@ -51,8 +51,8 @@ pub fn find_median_sorted_arrays_brute_force(nums1: Vec<i32>, nums2: Vec<i32>) -
 /// 
 /// # Approach
 ///
-/// Partition each vector into halves such that each half so that all
-/// element in the first half are less than all the values in teh second half.
+/// Partition each vector into halves such so that all
+/// elements in the first half are less than all the elements in the second half.
 pub fn find_median_sorted_arrays_intuitively(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     if nums1.len() <= nums2.len() {
         find_median(nums1, nums2)
