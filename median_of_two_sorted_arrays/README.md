@@ -87,17 +87,25 @@ Input:
 Output: 3
 
 Explanation:
+
 n = 2
+
 m = 3
+
 min = 0, max = 2
+
 Iteration 1:
+
     i = 1, j = 2
 
     first half -> [1, 2, 4], second half -> [3, 5]: 4 and 3 are in the wrong halves
 
     min = i + 1 = 2
+
 Iteration 2:
+
     i = (2 + 2) / 2 = 2
+
     j = (2 + 3 + 1) / 2 - 2 = 1
 
     first half -> [1, 2, 3], second half -> [4, 5]: all values are in the right place
