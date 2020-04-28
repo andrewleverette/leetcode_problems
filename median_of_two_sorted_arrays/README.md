@@ -41,17 +41,24 @@ int i = 0
 int j = 0
 int k = 0
 while i < length of nums1 or j < length of nums2
-    if nums1[i] <= nums2[j]
-        merged_array[k] = nums1[i]
-        i++
+    if i == length of nums1
+        merged_array[k] = nums1[j]
+        j++
+    else if j == length of nums2
+        merged_array[k] = nums2[i]
+        j++
     else
-        merged_array[k] = nums2[j]
+        if nums1[i] <= nums2[j]
+            merged_array[k] = nums2[i]
+            i++
+        else
+            merged_array[k] = nums1[j]
+            j++
     k++
 mid = length of merged array / 2
 if length of merged_array is odd
     return merged_array[mid]
 else
-
     return (merged_array[mid] + merged_array[mid - 1]) / 2
 ```
 
