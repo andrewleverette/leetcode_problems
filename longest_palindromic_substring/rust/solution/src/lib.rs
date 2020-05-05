@@ -26,7 +26,7 @@ pub fn longest_palindrome_expansion(s: String) -> String {
         let mut left = i;
         let mut right = i;
 
-        // Move right boundary it center is between two characters
+        // Move right boundary if center is between two characters
         while right + 1 < n && s[right + 1] == s[left] {
             right += 1;
         }
