@@ -26,7 +26,7 @@ You may assume `nums1` and `nums2` cannot be both empty.
 
 |     | Language |
 | --- | -------- |
-|  - | [Python](https://github.com/andrewleverette/leetcode_problems/blob/master/median_of_two_sorted_arrays/python/solution.py)|
+|  - | Python |
 |  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/median_of_two_sorted_arrays/rust/solution/src/lib.rs) |
 
 ### Approach 1: Brute Force
