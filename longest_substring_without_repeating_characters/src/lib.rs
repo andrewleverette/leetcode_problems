@@ -12,7 +12,7 @@ use std::collections::HashSet;
 /// This solution iterates through all possible substrings and tests if
 /// they are unique. If the substring is unique, then update the result
 /// with the maximum length. 
-pub fn length_longest_substring_brute_force(s: String) -> i32 {
+pub fn length_longest_substring_naive(s: String) -> i32 {
     let n = s.len();
     let mut length = 0;
 
@@ -34,6 +34,8 @@ pub fn length_longest_substring_brute_force(s: String) -> i32 {
 /// * `s` - The original string
 /// * `start` - The starting index of the substring
 /// * `end` - The index of the character past the end of the substring
+/// 
+/// # Approach
 fn all_unique(s: &str, start: usize, end: usize) -> bool {
     let mut set: HashSet<char> = HashSet::new();
     let chars: Vec<char> = s.chars().collect();
@@ -54,6 +56,12 @@ fn all_unique(s: &str, start: usize, end: usize) -> bool {
 /// * `s` - The input string
 /// 
 /// # Approach
+/// 
+/// This solution uses a sliding window approach where each character
+/// in substring is stored in a `HashSet`. The algorithm slides an upper bound
+/// to the right until a duplicate is reached or we reach the end of the string. If
+/// a duplicate is found the character at the lower bound is removed from the set and
+/// the lower bound is shifted to the right.
 pub fn length_of_longest_substring_sliding_window(s: String) -> i32 {
     let n = s.len();
     let mut length = 0;
@@ -112,7 +120,7 @@ mod tests {
     #[test]
     fn test_example_1() {
         assert_eq!(
-            length_longest_substring_brute_force(String::from("abcabcbb")),
+            length_longest_substring_naive(String::from("abcabcbb")),
             3
         );
         assert_eq!(
@@ -128,7 +136,7 @@ mod tests {
     #[test]
     fn test_example_2() {
         assert_eq!(
-            length_longest_substring_brute_force(String::from("bbbb")),
+            length_longest_substring_naive(String::from("bbbb")),
             1
         );
         assert_eq!(
@@ -144,7 +152,7 @@ mod tests {
     #[test]
     fn test_example_3() {
         assert_eq!(
-            length_longest_substring_brute_force(String::from("pwwkew")),
+            length_longest_substring_naive(String::from("pwwkew")),
             3
         );
         assert_eq!(
