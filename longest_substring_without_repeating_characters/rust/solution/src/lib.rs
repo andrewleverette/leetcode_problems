@@ -14,17 +14,17 @@ use std::collections::HashSet;
 /// with the maximum length. 
 pub fn length_longest_substring_brute_force(s: String) -> i32 {
     let n = s.len();
-    let mut result = 0;
+    let mut length = 0;
 
     for i in 0..n {
         for j in (i + 1)..=n {
             if all_unique(&s, i, j) {
-                result = cmp::max(result, j - i);
+                length = cmp::max(length, j - i);
             }
         }
     }
 
-    result as i32
+    length as i32
 }
 
 /// Checks if all the characters in a substring are unique
@@ -45,6 +45,35 @@ fn all_unique(s: &str, start: usize, end: usize) -> bool {
     }
 
     true
+}
+
+/// Returns the length of the longest substring without repeating characters
+/// 
+/// # Arguments
+/// 
+/// * `s` - The input string
+/// 
+/// # Approach
+pub fn length_of_longest_substring_sliding_window(s: String) -> i32 {
+    let n = s.len();
+    let mut length = 0;
+    let mut char_set: HashSet<char> = HashSet::new();
+    let chars: Vec<char> = s.chars().collect();
+    
+    let mut i = 0;
+    let mut j = 0;
+
+    while i < n && j < n {
+        if char_set.insert(chars[j]) {
+            j += 1;
+            length = cmp::max(length, j - i);
+        } else {
+            char_set.remove(&chars[i]);
+            i += 1;
+        }
+    }
+
+    length as i32
 }
 
 /// Returns the length of the longest substring without repeating characters.
@@ -87,6 +116,10 @@ mod tests {
             3
         );
         assert_eq!(
+            length_of_longest_substring_sliding_window(String::from("abcabcbb")),
+            3
+        );
+        assert_eq!(
             length_of_longest_substring_sliding_window_optimized(String::from("abcabcbb")),
             3
         );
@@ -99,6 +132,10 @@ mod tests {
             1
         );
         assert_eq!(
+            length_of_longest_substring_sliding_window(String::from("bbbb")),
+            1
+        );
+        assert_eq!(
             length_of_longest_substring_sliding_window_optimized(String::from("bbbb")),
             1
         );
@@ -108,6 +145,10 @@ mod tests {
     fn test_example_3() {
         assert_eq!(
             length_longest_substring_brute_force(String::from("pwwkew")),
+            3
+        );
+        assert_eq!(
+            length_of_longest_substring_sliding_window(String::from("pwwkew")),
             3
         );
         assert_eq!(
