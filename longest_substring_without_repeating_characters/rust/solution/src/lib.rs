@@ -1,4 +1,44 @@
 use std::cmp;
+use std::collections::HashSet;
+
+/// Returns the length of the longest substring without repeating characters
+/// 
+/// # Arguments
+/// 
+/// * `s` - The input string
+/// 
+/// # Approach
+/// 
+/// This solution iterates through all possible substrings and tests if
+/// they are unique. If the substring is unique, then update the result
+/// with the maximum length. 
+pub fn length_longest_substring_brute_force(s: String) -> i32 {
+    let n = s.len();
+    let mut result = 0;
+
+    for i in 0..n {
+        for j in (i + 1)..=n {
+            if all_unique(&s, i, j) {
+                result = cmp::max(result, j - i);
+            }
+        }
+    }
+
+    result as i32
+}
+
+fn all_unique(s: &str, start: usize, end: usize) -> bool {
+    let mut set: HashSet<char> = HashSet::new();
+    let chars: Vec<char> = s.chars().collect();
+
+    for i in start..end {
+       if !set.insert(chars[i]) {
+           return false;
+       }
+    }
+
+    true
+}
 
 /// Returns the length of the longest substring without repeating characters.
 ///
@@ -36,6 +76,10 @@ mod tests {
     #[test]
     fn test_example_1() {
         assert_eq!(
+            length_longest_substring_brute_force(String::from("abcabcbb")),
+            3
+        );
+        assert_eq!(
             length_of_longest_substring_sliding_window_optimized(String::from("abcabcbb")),
             3
         );
@@ -44,6 +88,10 @@ mod tests {
     #[test]
     fn test_example_2() {
         assert_eq!(
+            length_longest_substring_brute_force(String::from("bbbb")),
+            1
+        );
+        assert_eq!(
             length_of_longest_substring_sliding_window_optimized(String::from("bbbb")),
             1
         );
@@ -51,6 +99,10 @@ mod tests {
 
     #[test]
     fn test_example_3() {
+        assert_eq!(
+            length_longest_substring_brute_force(String::from("pwwkew")),
+            3
+        );
         assert_eq!(
             length_of_longest_substring_sliding_window_optimized(String::from("pwwkew")),
             3
