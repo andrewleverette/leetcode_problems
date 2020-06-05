@@ -24,11 +24,6 @@ You may assume `nums1` and `nums2` cannot be both empty.
 
 ## Solution
 
-|     | Language |
-| --- | -------- |
-|  - | Python |
-|  ✅ | [Rust](https://github.com/andrewleverette/leetcode_problems/blob/master/median_of_two_sorted_arrays/rust/solution/src/lib.rs) |
-
 ### Approach 1: Brute Force
 
 Since both input arrays are already sorted, a naive solution would be to merge the arrays by iterating through each and inserting the items into a new array. Then calculate the median.
