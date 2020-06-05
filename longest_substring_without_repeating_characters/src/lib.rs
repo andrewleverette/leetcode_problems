@@ -1,5 +1,5 @@
 use std::cmp;
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 
 /// Returns the length of the longest substring without repeating characters
 ///
@@ -94,19 +94,20 @@ pub fn length_of_longest_substring_sliding_window(s: String) -> i32 {
 /// starting and ending positions of the current substring. For each iteration,
 /// the current character is checked against the characters seen so far.
 /// If that character has already been seen, then slide the starting position
-/// forward to the ending position of the current substring. This solution works
-/// if you can make safe assumptions about the characters set. In this case I assume
-/// the character set is standard ASCII.
+/// forward to the ending position of the current substring.
 pub fn length_of_longest_substring_sliding_window_optimized(s: String) -> i32 {
     let mut length = 0;
 
-    let mut char_set = [0; 128];
+    let mut char_set: HashMap<char, usize> = HashMap::new();
 
     let mut start = 0;
     for (end, c) in s.char_indices() {
-        start = cmp::max(char_set[c as usize], start);
+        if let Some(&n) = char_set.get(&c) {
+            start = cmp::max(start, n);
+        }
+
         length = cmp::max(length, end - start + 1);
-        char_set[c as usize] = end + 1;
+        char_set.insert(c, end + 1);
     }
 
     length as i32
