@@ -34,8 +34,6 @@ pub fn length_longest_substring_naive(s: String) -> i32 {
 /// * `s` - The original string
 /// * `start` - The starting index of the substring
 /// * `end` - The index of the character past the end of the substring
-///
-/// # Approach
 fn all_unique(s: &str, start: usize, end: usize) -> bool {
     let mut set: HashSet<char> = HashSet::new();
     let chars: Vec<char> = s.chars().collect();
