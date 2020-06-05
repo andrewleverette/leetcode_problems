@@ -27,6 +27,13 @@ pub fn length_longest_substring_brute_force(s: String) -> i32 {
     result as i32
 }
 
+/// Checks if all the characters in a substring are unique
+/// 
+/// # Arguments
+/// 
+/// * `s` - The original string
+/// * `start` - The starting index of the substring
+/// * `end` - The index of the character past the end of the substring
 fn all_unique(s: &str, start: usize, end: usize) -> bool {
     let mut set: HashSet<char> = HashSet::new();
     let chars: Vec<char> = s.chars().collect();
