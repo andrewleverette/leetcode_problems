@@ -12,7 +12,7 @@ use std::collections::{HashMap, HashSet};
 /// This solution iterates through all possible substrings and tests if
 /// they are unique. If the substring is unique, then update the result
 /// with the maximum length.
-pub fn length_longest_substring_naive(s: String) -> i32 {
+pub fn length_of_longest_substring_naive(s: String) -> i32 {
     let n = s.len();
     let mut length = 0;
 
@@ -118,7 +118,7 @@ mod tests {
     use super::*;
     #[test]
     fn test_example_1() {
-        assert_eq!(length_longest_substring_naive(String::from("abcabcbb")), 3);
+        assert_eq!(length_of_longest_substring_naive(String::from("abcabcbb")), 3);
         assert_eq!(
             length_of_longest_substring_sliding_window(String::from("abcabcbb")),
             3
@@ -131,7 +131,7 @@ mod tests {
 
     #[test]
     fn test_example_2() {
-        assert_eq!(length_longest_substring_naive(String::from("bbbb")), 1);
+        assert_eq!(length_of_longest_substring_naive(String::from("bbbb")), 1);
         assert_eq!(
             length_of_longest_substring_sliding_window(String::from("bbbb")),
             1
@@ -144,7 +144,7 @@ mod tests {
 
     #[test]
     fn test_example_3() {
-        assert_eq!(length_longest_substring_naive(String::from("pwwkew")), 3);
+        assert_eq!(length_of_longest_substring_naive(String::from("pwwkew")), 3);
         assert_eq!(
             length_of_longest_substring_sliding_window(String::from("pwwkew")),
             3
