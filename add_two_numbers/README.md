@@ -14,4 +14,4 @@ You may assume the two numbers do not contain any leading zero, except the numbe
 
 ## Solution
 
-A detailed solution guide can be found at [Rust Bytes](https://andrewleverette.github.io/leetcode-add-two-numbers/).
+A detailed solution guide can be found at [Rust Bytes](https://andrewleverette.github.io/add-two-numbers/).

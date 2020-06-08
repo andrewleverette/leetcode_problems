@@ -28,3 +28,5 @@ Given a string, find the length of the longest substring without repeating chara
 >
 > Explanation: The answer is "wke", with the length of 3. 
 >             Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+A detailed solution guide can be found at [Rust Bytes](https://andrewleverette.github.io/longest-substring-without-repeating-characters/).

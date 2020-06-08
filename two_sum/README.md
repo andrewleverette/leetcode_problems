@@ -15,4 +15,4 @@ You may assume that each input would have exactly one solution, and you may not 
 
 ## Solutions
 
-A detailed solution can be found at [Rust Bytes](https://andrewleverette.github.io/leetcode-two-sum/).
+A detailed solution guide can be found at [Rust Bytes](https://andrewleverette.github.io/two-sum/).
