@@ -37,11 +37,11 @@ int j = 0
 int k = 0
 while i < length of nums1 or j < length of nums2
     if i == length of nums1
-        merged_array[k] = nums1[j]
+        merged_array[k] = nums2[j]
         j++
     else if j == length of nums2
-        merged_array[k] = nums2[i]
-        j++
+        merged_array[k] = nums1[i]
+        i++
     else
         if nums1[i] <= nums2[j]
             merged_array[k] = nums2[i]

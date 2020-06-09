@@ -11,7 +11,7 @@ use std::cmp;
 /// 
 /// Merge both vectors together by iterating over both input vectors
 /// and placing items in the merged vector in order.
-pub fn find_median_sorted_arrays_iteratively(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
+pub fn find_median_sorted_arrays_merge(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     let length = nums1.len() + nums2.len();
     let mut merged_array = Vec::with_capacity(length);
     let mut i = 0;
@@ -53,7 +53,7 @@ pub fn find_median_sorted_arrays_iteratively(nums1: Vec<i32>, nums2: Vec<i32>) -
 ///
 /// Partition each vector into halves such so that all
 /// elements in the first half are less than all the elements in the second half.
-pub fn find_median_sorted_arrays_intuitively(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
+pub fn find_median_sorted_arrays_m(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     if nums1.len() <= nums2.len() {
         find_median(nums1, nums2)
     } else {
@@ -120,47 +120,47 @@ mod tests {
     fn test_example_1() {
         let nums1 = vec![1, 3];
         let nums2 = vec![2];
-        assert_eq!(find_median_sorted_arrays_iteratively(nums1.clone(), nums2.clone()), 2.0);
-        assert_eq!(find_median_sorted_arrays_intuitively(nums1, nums2), 2.0);
+        assert_eq!(find_median_sorted_arrays_merge(nums1.clone(), nums2.clone()), 2.0);
+        assert_eq!(find_median_sorted_arrays_m(nums1, nums2), 2.0);
     }
 
     #[test]
     fn test_example_2() {
         let nums1 = vec![1, 2];
         let nums2 = vec![3, 4];
-        assert_eq!(find_median_sorted_arrays_iteratively(nums1.clone(), nums2.clone()), 2.5);
-        assert_eq!(find_median_sorted_arrays_intuitively(nums1, nums2), 2.5);
+        assert_eq!(find_median_sorted_arrays_merge(nums1.clone(), nums2.clone()), 2.5);
+        assert_eq!(find_median_sorted_arrays_m(nums1, nums2), 2.5);
     }
 
     #[test]
     fn test_example_3() {
         let nums1 = vec![];
         let nums2 = vec![1];
-        assert_eq!(find_median_sorted_arrays_iteratively(nums1.clone(), nums2.clone()), 1.0);
-        assert_eq!(find_median_sorted_arrays_intuitively(nums1, nums2), 1.0);
+        assert_eq!(find_median_sorted_arrays_merge(nums1.clone(), nums2.clone()), 1.0);
+        assert_eq!(find_median_sorted_arrays_m(nums1, nums2), 1.0);
     }
 
     #[test]
     fn test_example_4() {
         let nums1 = vec![];
         let nums2 = vec![2, 3];
-        assert_eq!(find_median_sorted_arrays_iteratively(nums1.clone(), nums2.clone()), 2.5);
-        assert_eq!(find_median_sorted_arrays_intuitively(nums1, nums2), 2.5);
+        assert_eq!(find_median_sorted_arrays_merge(nums1.clone(), nums2.clone()), 2.5);
+        assert_eq!(find_median_sorted_arrays_m(nums1, nums2), 2.5);
     }
 
     #[test]
     fn test_example_5() {
         let nums1 = vec![1];
         let nums2 = vec![];
-        assert_eq!(find_median_sorted_arrays_iteratively(nums1.clone(), nums2.clone()), 1.0);
-        assert_eq!(find_median_sorted_arrays_intuitively(nums1, nums2), 1.0);
+        assert_eq!(find_median_sorted_arrays_merge(nums1.clone(), nums2.clone()), 1.0);
+        assert_eq!(find_median_sorted_arrays_m(nums1, nums2), 1.0);
     }
 
     #[test]
     fn test_example_6() {
         let nums1 = vec![2, 3];
         let nums2 = vec![];
-        assert_eq!(find_median_sorted_arrays_iteratively(nums1.clone(), nums2.clone()), 2.5);
-        assert_eq!(find_median_sorted_arrays_intuitively(nums1, nums2), 2.5);
+        assert_eq!(find_median_sorted_arrays_merge(nums1.clone(), nums2.clone()), 2.5);
+        assert_eq!(find_median_sorted_arrays_m(nums1, nums2), 2.5);
     }
 }
