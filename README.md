@@ -8,4 +8,7 @@
 | 4 | [Median of Two Sorted Arrays](https://github.com/andrewleverette/leetcode_problems/tree/master/median_of_two_sorted_arrays) | Hard | [📄](https://github.com/andrewleverette/leetcode_problems/blob/master/median_of_two_sorted_arrays/src/lib.rs)|
 | 5 | [Longest Palindromic Substring](https://github.com/andrewleverette/leetcode_problems/tree/master/longest_palindromic_substring) | Medium | [📄](https://github.com/andrewleverette/leetcode_problems/blob/master/longest_palindromic_substring/src/lib.rs)|
 | 6 | [ZigZag Conversion](https://github.com/andrewleverette/leetcode_problems/tree/master/zizag_conversion) | Medium | [📄](https://github.com/andrewleverette/leetcode_problems/blob/master/zizag_conversion/src/lib.rs)|
-| 7 | [Reverse Integer](https://github.com/andrewleverette/leetcode_problems/tree/master/reverse_integer) | Easy | [📄](https://github.com/andrewleverette/leetcode_problems/blob/master/reverse_integer/src/lib.rs)|
+| 7 | [Reverse Integer](https://github.com/andrewleverette/leetcode_problems/tree/master/reverse_integer) | Easy | 
+| 8 | [String to Integer](./string_to_integer/README.md) | Medium | [📄](./string_to_integer/src/lib.rs)|
+[📄](https://github.com/andrewleverette/leetcode_problems/blob/master/reverse_integer/src/lib.rs)|
+| 621 | [Task Scheduler](./task_scheduler/README.md) | Medium | [📄](./task_scheduler/src/lib.rs)|
