@@ -2,27 +2,27 @@ use std::collections::HashMap;
 
 /// Finds sentences that can be created given a non-empty string and a
 /// dictionary as a list of words.
-/// 
+///
 /// # Arguments
-/// 
+///
 /// * `s` - The original string
-/// * `word_dict` - List of valid words 
+/// * `word_dict` - List of valid words
 pub fn word_break(s: String, word_dict: Vec<String>) -> Vec<String> {
     let mut sentence_map = HashMap::new();
-    sentence_builder(s, &word_dict, &mut sentence_map)
+    sentence_builder(&s, &word_dict, &mut sentence_map)
 }
 
-/// Recursively builds a list of sentences for each substring of 
-/// `s` and finally returns the list of sentences for the original 
+/// Recursively builds a list of sentences for each substring of
+/// `s` and finally returns the list of sentences for the original
 /// `s`
-/// 
+///
 /// # Arguments
-/// 
+///
 /// * `s` - A substring of the original string
 /// * `word_dict` - A reference to the list of valid words
 /// * `sentence_map` - A map of substrings to the current list of possible sentences
 fn sentence_builder(
-    s: String,
+    s: &str,
     word_dict: &[String],
     sentence_map: &mut HashMap<String, Vec<String>>,
 ) -> Vec<String> {
@@ -33,7 +33,7 @@ fn sentence_builder(
 
     // Base case return current list of sentences if substring
     // has been seen before
-    if let Some(words) = sentence_map.get(&s) {
+    if let Some(words) = sentence_map.get(s) {
         return words.to_vec();
     }
 
@@ -54,7 +54,7 @@ fn sentence_builder(
 
         // Recurse on substring of any matches and update the current
         // sentence list
-        let partials = sentence_builder(s[word.len()..].to_owned(), word_dict, sentence_map);
+        let partials = sentence_builder(&s[word.len()..], word_dict, sentence_map);
         for partial in partials {
             let space = if partial.is_empty() { "" } else { " " };
             sentences.push(format!("{}{}{}", word, space, partial));
@@ -62,7 +62,7 @@ fn sentence_builder(
     }
 
     // Update current sentence list for substring
-    sentence_map.insert(s, sentences.to_owned());
+    sentence_map.insert(s.to_owned(), sentences.to_owned());
 
     sentences
 }
