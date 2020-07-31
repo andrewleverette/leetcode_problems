@@ -10,5 +10,6 @@
 | 6 | [ZigZag Conversion](https://github.com/andrewleverette/leetcode_problems/tree/master/zizag_conversion) | Medium | [📄](https://github.com/andrewleverette/leetcode_problems/blob/master/zizag_conversion/src/lib.rs)|
 | 7 | [Reverse Integer](https://github.com/andrewleverette/leetcode_problems/tree/master/reverse_integer) | Easy | 
 | 8 | [String to Integer](./string_to_integer/README.md) | Medium | [📄](./string_to_integer/src/lib.rs)|
+| 140 | [Task Scheduler](./word_break_ii/README.md) | Medium | [📄](./word_break_ii/src/lib.rs)|
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](./buy_and_sell_stock_cooldown/README.md) | Medium | [📄](./buy_and_sell_stock_cooldown/src/lib.rs)|
 | 621 | [Task Scheduler](./task_scheduler/README.md) | Medium | [📄](./task_scheduler/src/lib.rs)|
