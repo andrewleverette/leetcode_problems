@@ -25,13 +25,12 @@ pub fn climb_stairs_linear(n: i32) -> i32 {
 
 /// Calculates the distinct number of ways that 
 /// n-number of steps can be climbed taking either 1 or
-/// 2 steps at a time. This is calculated using recursive
-/// dynamic programming. 
+/// 2 steps at a time. This is calculated using memoization
 pub fn climb_stairs_memoize(n: i32) -> i32 {
-    let mut memoize: HashMap<i32, i32> = HashMap::new();
-    memoize.insert(1, 1);
-    memoize.insert(2, 2);
-    backtrack(n, &mut memoize)
+    let mut cache: HashMap<i32, i32> = HashMap::new();
+    cache.insert(1, 1);
+    cache.insert(2, 2);
+    backtrack(n, &mut cache)
 }
 
 /// Returns the distinct paths to `n`. If an `n` has been seen
@@ -40,14 +39,14 @@ pub fn climb_stairs_memoize(n: i32) -> i32 {
 /// 
 /// # Arguments
 /// 
-/// * ` - The current number of steps
-/// * `memoize` - A mapping of a `n` to the number of distinct paths
-fn backtrack(n: i32, memoize: &mut HashMap<i32, i32>) -> i32 {
-    if let Some(&steps) = memoize.get(&n) {
+/// * `n` - The current number of steps
+/// * `cache` - A mapping of a `n` to the number of distinct paths
+fn backtrack(n: i32, cache: &mut HashMap<i32, i32>) -> i32 {
+    if let Some(&steps) = cache.get(&n) {
         steps
     } else {
-        let steps = backtrack(n - 1, memoize) + backtrack(n - 2, memoize);
-        memoize.insert(n, steps);
+        let steps = backtrack(n - 1, cache) + backtrack(n - 2, cache);
+        cache.insert(n, steps);
         steps
     }
 }
