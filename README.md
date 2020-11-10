@@ -16,4 +16,5 @@
 | 520 | [Detect Capital](./detect_capital/README.md) | Easy | [📄](./detect_capital/src/lib.rs)|
 | 621 | [Task Scheduler](./task_scheduler/README.md) | Medium | [📄](./task_scheduler/src/lib.rs)|
 | 705 | [Design HashSet](./design_hashset/README.md) | Easy | [📄](./design_hashset/src/lib.rs)|
+| 832 | [Flipping an Image](./flipping_an_image/README.md)| Easy | [📄](./flipping_an_image/src/lib.rs)|
 | 1026 | [Maximum Difference Between Node and Ancestor](./maximum_difference_between_node_and_ancestors/README.md)| Medium | [📄](./maximum_difference_between_node_and_ancestors/src/lib.rs)|
