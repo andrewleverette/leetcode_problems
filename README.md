@@ -13,6 +13,7 @@
 | 70 | [Climbing Stairs](./climbing_stairs/README.md) | Easy | [📄](./climbing_stairs/src/lib.rs)|
 | 140 | [Word Break II](./word_break_ii/README.md) | Hard | [📄](./word_break_ii/src/lib.rs)|
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](./buy_and_sell_stock_cooldown/README.md) | Medium | [📄](./buy_and_sell_stock_cooldown/src/lib.rs)|
+| 394 | [Decode String](./decode_string/README.md)| Medium | [📄](./decode_string/src/lib.rs)|
 | 520 | [Detect Capital](./detect_capital/README.md) | Easy | [📄](./detect_capital/src/lib.rs)|
 | 593 | [Valid Square](./valid_square./README.md)| Medium | [📄](./valid_square/src/lib.rs)|
 | 621 | [Task Scheduler](./task_scheduler/README.md) | Medium | [📄](./task_scheduler/src/lib.rs)|
